@@ -1,34 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nathan Shorez</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nathan Shorez | Software Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Nathan Shorez</h1>
-  <p>Computer Science graduate and IT professional.</p>
 
-  <h2>About Me</h2>
-  <p>
-    I have experience in IT support, software development, networking,
-    technical troubleshooting, and automation.
-  </p>
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Nathan Shorez</h1>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>Portfolio Website</li>
-    <li>Game Development Projects</li>
-    <li>IT and Automation Projects</li>
-  </ul>
+    <section class="hero-content">
+      <p class="eyebrow">Software Developer • IT Professional • Game Developer</p>
+      <h2>Building clean, efficient, and impactful technical solutions.</h2>
+      <p>
+        I am a Computer Science graduate with experience in Java, Spring Boot,
+        SQL, REST API development, Python, C++, Unity, IT systems, automation,
+        and technical troubleshooting.
+      </p>
 
-  <h2>Experience</h2>
-  <p>
-    I have worked on technical support, system setup, documentation,
-    software troubleshooting, and hands-on IT tasks.
-  </p>
+      <div class="button-group">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn secondary" href="resume/Nathan-Shorez-Resume.pdf" download>Download Resume</a>
+        <a class="btn secondary" href="https://github.com/Nathan-S1" target="_blank">GitHub</a>
+      </div>
+    </section>
+  </header>
 
-  <h2>Contact</h2>
-  <p>GitHub: Nathan-S1</p>
+  <main>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m Nathan. I’m a software developer with a passion for building
+        clean, efficient, and impactful software solutions. I have a strong
+        foundation in Java, Spring Boot, SQL, and REST API development through
+        Revature’s Pre-Training Program, and I have expanded my skill set
+        through personal and client projects using Python, C++, Unity, and web tools.
+      </p>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Technical Skills</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Java & Spring Boot</h3>
+          <p>REST APIs, Spring Data, JPA, MVC, and testing with JUnit and Mockito.</p>
+        </div>
+
+        <div class="card">
+          <h3>Python</h3>
+          <p>OpenCV, Stable Diffusion, web scraping, automation, and multimedia generation.</p>
+        </div>
+
+        <div class="card">
+          <h3>C++</h3>
+          <p>Data structures, algorithms, robotics logic, PID controllers, STL, priority queues, and MSTs.</p>
+        </div>
+
+        <div class="card">
+          <h3>Unity</h3>
+          <p>2D/3D game development, physics interactions, player input, UI systems, and gameplay mechanics.</p>
+        </div>
+
+        <div class="card">
+          <h3>Web Tools</h3>
+          <p>Google Sites client work, HTML, CSS, GitHub Pages, and basic frontend development.</p>
+        </div>
+
+        <div class="card">
+          <h3>IT & Systems</h3>
+          <p>Windows support, system setup, troubleshooting, remote access, printers, networking, and documentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+
+      <div class="card-grid">
+        <div class="card project-card">
+          <h3>Spring Social Media Blog API</h3>
+          <p>
+            Built a backend API using Spring Boot for managing users and messages
+            in a social media blog. Integrated Spring Data JPA, service layers,
+            and test coverage.
+          </p>
+          <a href="#" class="card-link">GitHub Repo Coming Soon</a>
+        </div>
+
+        <div class="card project-card">
+          <h3>Javalin Social Media Blog API</h3>
+          <p>
+            Earlier version of the social media API built using Javalin and JDBC.
+            Developed RESTful endpoints, implemented full CRUD functionality,
+            and tested endpoints using JUnit.
+          </p>
+          <a href="#" class="card-link">GitHub Repo Coming Soon</a>
+        </div>
+
+        <div class="card project-card">
+          <h3>AI Video Generator</h3>
+          <p>
+            Utilized Python and neural networks to generate multimedia content
+            based on visual storytelling. Built with OpenCV, Matplotlib, and
+            media processing techniques.
+          </p>
+          <a href="#" class="card-link">Demo Coming Soon</a>
+        </div>
+
+        <div class="card project-card">
+          <h3>Robotics Projects</h3>
+          <p>
+            Developed autonomous robot navigation systems including line-following
+            robots, obstacle avoidance systems, PID control, and C++ algorithm projects.
+          </p>
+          <a href="#" class="card-link">Details Coming Soon</a>
+        </div>
+
+        <div class="card project-card">
+          <h3>Unity Game Development</h3>
+          <p>
+            Created a DDR-style rhythm game, a 2D apple-catching game with
+            physics-based interactions, and a 3D marble-rolling game inspired
+            by Super Monkey Ball.
+          </p>
+          <a href="#" class="card-link">Playable Demos Coming Soon</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Work Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>HyperiaGames — Unity Game Developer / Programmer</h3>
+          <p class="date">Remote | September 2025 – Present</p>
+          <ul>
+            <li>Develop and maintain gameplay scripts in C# and C++.</li>
+            <li>Implement core mechanics and refine player interactions.</li>
+            <li>Integrate AI systems into gameplay to improve character behavior and responsiveness.</li>
+            <li>Design and implement UI elements including menus, HUDs, and player interaction systems.</li>
+            <li>Contribute to client-side networking features for smoother online gameplay.</li>
+            <li>Create custom 2D and 3D player objects, props, and level designs.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>HP — Computing Representative</h3>
+          <p class="date">San Diego, CA | May 2025 – Present</p>
+          <ul>
+            <li>Advise customers on HP desktops, laptops, all-in-one PCs, and printers based on technical needs.</li>
+            <li>Migrate approximately 300 users per month from Windows XP–10 to Windows 11.</li>
+            <li>Deliver product demonstrations highlighting performance, compatibility, and hardware specifications.</li>
+            <li>Assist with device troubleshooting, setup, maintenance, and customer technical questions.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h3>North County Eye Center — IT Manager</h3>
+          <p class="date">San Marcos, CA | December 2025 – Present</p>
+          <ul>
+            <li>Develop and maintain computer systems to improve performance and reliability.</li>
+            <li>Monitor technician workstations and assist with issues during normal work hours.</li>
+            <li>Set up new computers for optical testing use and remote access.</li>
+            <li>Install and manage office technology including printers and network systems.</li>
+            <li>Provide end-user management and technical support for daily operations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>B.S. in Computer Science</h3>
+          <p>San Diego State University</p>
+          <p>Graduated December 2024</p>
+        </div>
+
+        <div class="card">
+          <h3>Cybersecurity Professional Certificate</h3>
+          <p>Completed March 2025</p>
+        </div>
+
+        <div class="card">
+          <h3>M.S. in Computer Science</h3>
+          <p>Georgia Institute of Technology</p>
+          <p>Planned / In Progress</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        Interested in working together or viewing my projects? Feel free to connect with me.
+      </p>
+
+      <div class="contact-links">
+        <a href="https://github.com/Nathan-S1" target="_blank">GitHub</a>
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="mailto:shorez.nathan@gmail.com">Email</a>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p class="small-note">
+        Contact form setup requires a free Formspree form ID. Until then, the email link works.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Nathan Shorez. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
