@@ -61,10 +61,12 @@ function showProject(projectId) {
     demoLink.href = project.demo;
     demoLink.textContent = "Run Demo";
     demoLink.style.display = "inline-block";
+    demoLink.classList.remove("disabled-link");
   } else {
     demoLink.removeAttribute("href");
     demoLink.textContent = "Demo Coming Soon";
     demoLink.style.display = "inline-block";
+    demoLink.classList.add("disabled-link");
   }
 }
 
