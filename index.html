@@ -89,58 +89,29 @@
 
     <section id="projects" class="section">
       <h2>Featured Projects</h2>
+        <p>
+          Select a project below to view details, open the GitHub repository, or run available browser demos.
+        </p>
 
-      <div class="card-grid">
-        <div class="card project-card">
-          <h3>Spring Social Media Blog API</h3>
-          <p>
-            Built a backend API using Spring Boot for managing users and messages
-            in a social media blog. Integrated Spring Data JPA, service layers,
-            and test coverage.
-          </p>
-          <a href="#" class="card-link">GitHub Repo Coming Soon</a>
-        </div>
+        <div class="project-selector">
+          <button onclick="showProject('applepicker')">Apple Picker</button>
+    <button onclick="showProject('videogenerator')">Video Generator</button>
+    <button onclick="showProject('imagegenerator')">Image Generator</button>
+    <button onclick="showProject('speechsynthesis')">Speech Synthesis</button>
+  </div>
 
-        <div class="card project-card">
-          <h3>Javalin Social Media Blog API</h3>
-          <p>
-            Earlier version of the social media API built using Javalin and JDBC.
-            Developed RESTful endpoints, implemented full CRUD functionality,
-            and tested endpoints using JUnit.
-          </p>
-          <a href="#" class="card-link">GitHub Repo Coming Soon</a>
-        </div>
+  <div class="selected-project-card">
+    <p class="project-type" id="selected-project-type"></p>
+    <h3 id="selected-project-title"></h3>
+    <p id="selected-project-description"></p>
+    <p class="project-status" id="selected-project-status"></p>
 
-        <div class="card project-card">
-          <h3>AI Video Generator</h3>
-          <p>
-            Utilized Python and neural networks to generate multimedia content
-            based on visual storytelling. Built with OpenCV, Matplotlib, and
-            media processing techniques.
-          </p>
-          <a href="#" class="card-link">Demo Coming Soon</a>
-        </div>
-
-        <div class="card project-card">
-          <h3>Robotics Projects</h3>
-          <p>
-            Developed autonomous robot navigation systems including line-following
-            robots, obstacle avoidance systems, PID control, and C++ algorithm projects.
-          </p>
-          <a href="#" class="card-link">Details Coming Soon</a>
-        </div>
-
-        <div class="card project-card">
-          <h3>Unity Game Development</h3>
-          <p>
-            Created a DDR-style rhythm game, a 2D apple-catching game with
-            physics-based interactions, and a 3D marble-rolling game inspired
-            by Super Monkey Ball.
-          </p>
-          <a href="#" class="card-link">Playable Demos Coming Soon</a>
-        </div>
-      </div>
-    </section>
+    <div class="button-group">
+      <a class="btn" id="selected-project-repo" href="#" target="_blank">View GitHub Repo</a>
+      <a class="btn secondary" id="selected-project-demo" href="#">Run Demo</a>
+    </div>
+  </div>
+</section>
 
     <section id="experience" class="section">
       <h2>Work Experience</h2>
