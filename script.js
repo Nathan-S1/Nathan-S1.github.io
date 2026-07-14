@@ -1,75 +1,213 @@
+"use strict";
+
 const projects = {
   applepicker: {
     title: "Apple Picker",
-    type: "Unity Game",
+    type: "Unity WebGL Game",
+
     description:
-      "A Unity game where players control a basket to catch falling apples while avoiding rotten apples. Features dynamic spawning, scoring, and gameplay interactions.",
-    repo: "https://github.com/Nathan-S1/ApplePicker",
-    status: "Can run on this website after exporting the Unity project as a WebGL build.",
-    demo: "projects/applepicker/index.html"
+      "A Unity game where the player controls baskets to catch falling apples while managing score and gameplay interactions.",
+
+    openUrl: "projects/applepicker/index.html",
+
+    repoUrl:
+      "https://github.com/Nathan-S1/ApplePicker",
+
+    openLabel: "Play Apple Picker",
+
+    notice:
+      "The game opens only after this button is pressed. Your Unity WebGL files must be uploaded to projects/applepicker/."
   },
 
   videogenerator: {
     title: "Video Generator",
-    type: "Python / OpenCV / Multimedia",
+    type: "Python / Jupyter Notebook",
+
     description:
-      "A Python project that processes images and text to generate dynamic video content using OpenCV, PIL, and media processing tools.",
-    repo: "https://github.com/Nathan-S1/VideoGenerator",
-    status:
-      "Requires Python or a hosted backend. For now, this can link to the GitHub repo or a recorded demo video.",
-    demo: null
+      "A Python multimedia project that processes images and text to create video content using OpenCV, Pillow, and related media-processing tools.",
+
+    openUrl:
+      "https://colab.research.google.com/github/Nathan-S1/VideoGenerator/blob/main/src/video_generator.ipynb",
+
+    repoUrl:
+      "https://github.com/Nathan-S1/VideoGenerator",
+
+    openLabel: "Open Notebook in Colab",
+
+    notice:
+      "Google Colab opens the Jupyter notebook in a new tab. The visitor may need to run the notebook cells and install its dependencies."
   },
 
   imagegenerator: {
     title: "Image Generator",
-    type: "Python / Image Processing",
+    type: "Python / Jupyter Notebook",
+
     description:
-      "A Python-based image generation and manipulation project using libraries such as PIL and Matplotlib.",
-    repo: "https://github.com/Nathan-S1/ImageGenerator",
-    status:
-      "Requires Python or a hosted backend. Later, this can become a browser demo or API-powered tool.",
-    demo: null
+      "A Python image-generation and image-manipulation project using Pillow and Matplotlib for filters, transformations, text overlays, and graphical elements.",
+
+    openUrl:
+      "https://colab.research.google.com/github/Nathan-S1/ImageGenerator/blob/main/src/image_generator.ipynb",
+
+    repoUrl:
+      "https://github.com/Nathan-S1/ImageGenerator",
+
+    openLabel: "Open Notebook in Colab",
+
+    notice:
+      "Google Colab opens the Jupyter notebook in a new tab. The visitor may need to run the notebook cells and install its dependencies."
   },
 
   speechsynthesis: {
     title: "Multilingual Speech Synthesis",
-    type: "Python / Text-to-Speech",
+    type: "Python Text-to-Speech Project",
+
     description:
-      "A multilingual speech synthesis project using Python and text-to-speech tools such as gTTS.",
-    repo: "https://github.com/Nathan-S1/MultilingualSpeechSynthesis",
-    status:
-      "Requires Python and speech synthesis dependencies. Later, this can connect to a hosted backend.",
-    demo: null
+      "A multilingual text-to-speech project using Python and gTTS to convert text into spoken audio in multiple languages.",
+
+    openUrl:
+      "https://github.com/Nathan-S1/MultilingualSpeechSynthesis",
+
+    repoUrl:
+      "https://github.com/Nathan-S1/MultilingualSpeechSynthesis",
+
+    openLabel: "Open Project Files",
+
+    notice:
+      "This repository currently documents a Python script rather than a Jupyter notebook. It therefore opens the project repository instead of running directly on GitHub Pages."
   }
 };
 
-function showProject(projectId) {
-  const project = projects[projectId];
-
-  document.getElementById("selected-project-title").textContent = project.title;
-  document.getElementById("selected-project-type").textContent = project.type;
-  document.getElementById("selected-project-description").textContent = project.description;
-  document.getElementById("selected-project-status").textContent = project.status;
-
-  const repoLink = document.getElementById("selected-project-repo");
-  repoLink.href = project.repo;
-  repoLink.textContent = "View GitHub Repo";
-
-  const demoLink = document.getElementById("selected-project-demo");
-
-  if (project.demo) {
-    demoLink.href = project.demo;
-    demoLink.textContent = "Run Demo";
-    demoLink.style.display = "inline-block";
-    demoLink.classList.remove("disabled-link");
-  } else {
-    demoLink.removeAttribute("href");
-    demoLink.textContent = "Demo Coming Soon";
-    demoLink.style.display = "inline-block";
-    demoLink.classList.add("disabled-link");
-  }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  showProject("applepicker");
+  const projectSelect =
+    document.getElementById("project-select");
+
+  const projectDetails =
+    document.getElementById("project-details");
+
+  const projectType =
+    document.getElementById("project-type");
+
+  const projectTitle =
+    document.getElementById("project-title");
+
+  const projectDescription =
+    document.getElementById("project-description");
+
+  const projectNotice =
+    document.getElementById("project-notice");
+
+  const openProjectButton =
+    document.getElementById("open-project-button");
+
+  const viewRepoButton =
+    document.getElementById("view-repo-button");
+
+  const projectMessage =
+    document.getElementById("project-message");
+
+  const currentYear =
+    document.getElementById("current-year");
+
+  if (currentYear) {
+    currentYear.textContent =
+      new Date().getFullYear().toString();
+  }
+
+  function getSelectedProject() {
+    const selectedId = projectSelect.value;
+
+    if (!selectedId) {
+      return null;
+    }
+
+    return projects[selectedId] ?? null;
+  }
+
+  function clearProjectSelection() {
+    projectDetails.hidden = true;
+
+    projectType.textContent = "";
+    projectTitle.textContent = "";
+    projectDescription.textContent = "";
+    projectNotice.textContent = "";
+
+    openProjectButton.textContent = "Open Project";
+    openProjectButton.disabled = true;
+
+    viewRepoButton.disabled = true;
+
+    projectMessage.textContent =
+      "Select a project to continue.";
+  }
+
+  function displaySelectedProject(project) {
+    projectDetails.hidden = false;
+
+    projectType.textContent = project.type;
+    projectTitle.textContent = project.title;
+    projectDescription.textContent =
+      project.description;
+    projectNotice.textContent = project.notice;
+
+    openProjectButton.textContent =
+      project.openLabel;
+
+    openProjectButton.disabled = false;
+    viewRepoButton.disabled = false;
+
+    projectMessage.textContent =
+      `${project.title} is ready. Press a button to continue.`;
+  }
+
+  function openExternalPage(url) {
+    const openedWindow = window.open(
+      url,
+      "_blank",
+      "noopener,noreferrer"
+    );
+
+    if (!openedWindow) {
+      projectMessage.textContent =
+        "Your browser blocked the new tab. Allow pop-ups for this website and try again.";
+    }
+  }
+
+  projectSelect.addEventListener("change", () => {
+    const project = getSelectedProject();
+
+    if (!project) {
+      clearProjectSelection();
+      return;
+    }
+
+    displaySelectedProject(project);
+  });
+
+  openProjectButton.addEventListener("click", () => {
+    const project = getSelectedProject();
+
+    if (!project) {
+      clearProjectSelection();
+      projectMessage.textContent =
+        "Please choose a project first.";
+      return;
+    }
+
+    openExternalPage(project.openUrl);
+  });
+
+  viewRepoButton.addEventListener("click", () => {
+    const project = getSelectedProject();
+
+    if (!project) {
+      clearProjectSelection();
+      projectMessage.textContent =
+        "Please choose a project first.";
+      return;
+    }
+
+    openExternalPage(project.repoUrl);
+  });
+
+  clearProjectSelection();
 });
