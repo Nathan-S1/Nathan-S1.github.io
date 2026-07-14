@@ -1,44 +1,61 @@
 # Nathan Shorez Portfolio Website
 
-This repository contains my personal portfolio website, built with HTML, CSS, and JavaScript and hosted using GitHub Pages.
+This repository contains my personal professional portfolio website.
+
+The website is built with HTML, CSS, and JavaScript and is intended to be hosted through GitHub Pages.
 
 ## Purpose
 
-This website is intended to showcase my background, technical experience, projects, resume, and contact information.
+The portfolio showcases my:
 
-## Planned Features
+- Software development background
+- IT experience
+- Technical skills
+- Education
+- Unity game-development work
+- Python and artificial-intelligence projects
+- Resume
+- Professional contact information
 
-- Professional portfolio homepage
-- About Me section
-- Skills and technologies section
-- Experience section
+## Current Features
+
+- Responsive professional portfolio layout
+- About section
+- Technical skills section
+- Work-experience section
 - Education section
-- Projects section
 - Downloadable resume
-- Contact form
-- Project selector
-- Future project pages for AI tools and simple games
-- Mobile-friendly design
+- GitHub and LinkedIn links
+- Formspree contact form
+- Project-selection dropdown
+- Unity WebGL project support
+- Google Colab notebook links
+- Links to project source repositories
 
-## Current Project List
+## Project Dropdown
+
+The website does not automatically load or run any project.
+
+Visitors must:
+
+1. Select a project from the dropdown.
+2. Review the project description.
+3. Press the project button or repository button.
+
+### Available Projects
 
 - Apple Picker
 - Video Generator
 - Image Generator
 - Multilingual Speech Synthesis
 
-## Project Goals
+## Project Types
 
-The goal of this website is to provide a clean, professional, and technical portfolio that can be shared with employers, recruiters, collaborators, and anyone interested in my work.
+### Apple Picker
 
-## Technologies
+Apple Picker is a Unity project exported as a WebGL build.
 
-- HTML
-- CSS
-- JavaScript
-- GitHub Pages
-- Formspree
+Expected website location:
 
-## Status
-
-This website is currently under development.
+```text
+projects/applepicker/
