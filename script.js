@@ -59,21 +59,21 @@ const projects = {
 
   speechsynthesis: {
     title: "Multilingual Speech Synthesis",
-    type: "Python Text-to-Speech Project",
+    type: "Python / Google Colab",
 
     description:
       "A multilingual text-to-speech project using Python and gTTS to convert text into spoken audio in multiple languages.",
 
     openUrl:
-      "https://github.com/Nathan-S1/MultilingualSpeechSynthesis",
+      "https://colab.research.google.com/github/Nathan-S1/MultilingualSpeechSynthesis/blob/main/src/YOUR_NOTEBOOK_NAME.ipynb",
 
     repoUrl:
       "https://github.com/Nathan-S1/MultilingualSpeechSynthesis",
 
-    openLabel: "Open Project Files",
+    openLabel: "Open Notebook in Colab",
 
     notice:
-      "This repository currently documents a Python script rather than a Jupyter notebook. It therefore opens the project repository instead of running directly on GitHub Pages."
+      "Google Colab opens the notebook in a new tab. The visitor may need to run the notebook cells and install its dependencies."
   }
 };
 
