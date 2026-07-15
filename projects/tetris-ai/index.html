@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tetris AI</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/pyodide/v0.29.0/full/pyodide.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Python + Pyodide</p>
+      <h1>Tetris AI</h1>
+      <p>The board and animation use an HTML canvas. The AI evaluates every legal move with Python running directly in this browser.</p>
+    </header>
+
+    <section class="layout">
+      <div class="game-shell card">
+        <canvas id="game" width="260" height="520" aria-label="Tetris game board"></canvas>
+      </div>
+
+      <aside class="card controls">
+        <div class="python-state">
+          <span id="python-light" class="light"></span>
+          <span id="python-status">Loading Python…</span>
+        </div>
+
+        <div class="stats">
+          <div><span>Score</span><strong id="score">0</strong></div>
+          <div><span>Lines</span><strong id="lines">0</strong></div>
+          <div><span>Level</span><strong id="level">0</strong></div>
+          <div><span>Pieces</span><strong id="pieces">0</strong></div>
+        </div>
+
+        <label>
+          Drop mode
+          <select id="mode">
+            <option value="normal">Normal animated drop</option>
+            <option value="fast">Fast hard drop</option>
+          </select>
+        </label>
+
+        <label>
+          Stop after this many pieces
+          <input id="piece-cap" type="number" min="1" max="10000" value="250">
+        </label>
+
+        <div class="actions">
+          <button id="start" disabled>Start AI</button>
+          <button id="pause" class="secondary" disabled>Pause</button>
+          <button id="reset" class="danger">Reset</button>
+        </div>
+
+        <p id="message" class="status" aria-live="polite"></p>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
