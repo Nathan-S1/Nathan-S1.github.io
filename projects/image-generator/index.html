@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Image Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">GPU Python Project</p>
+      <h1>AI Image Generator</h1>
+      <p>This project keeps its original Python notebook because the model requires PyTorch and GPU resources that static GitHub Pages does not provide.</p>
+    </header>
+
+    <section class="card showcase">
+      <div class="flow">
+        <div><strong>1. Enter a prompt</strong><span>The visitor describes the desired image.</span></div>
+        <div><strong>2. Run in Colab</strong><span>Google Colab loads <code>Stable Diffusion 2.1</code> with GPU support.</span></div>
+        <div><strong>3. Save the result</strong><span>The generated image is displayed and saved as a PNG.</span></div>
+      </div>
+
+      <div class="notice">
+        The notebook is included in this website package. After publishing the repository, update <code>GITHUB_USERNAME</code> and <code>GITHUB_REPOSITORY</code> in this page's <code>script.js</code>.
+      </div>
+
+      <div class="actions">
+        <a id="colab-link" class="button" href="#" target="_blank" rel="noopener">Open in Google Colab</a>
+        <a class="button secondary" href="../../notebooks/image-generator.ipynb" download>Download Notebook</a>
+      </div>
+
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+</body>
+</html>
