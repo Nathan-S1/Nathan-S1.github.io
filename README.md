@@ -1,25 +1,12 @@
 # Nathan Shorez Portfolio Website
 
-This repository contains my personal professional portfolio website.
+This repository contains my professional portfolio website.
 
-The website is built with HTML, CSS, and JavaScript and is intended to be hosted through GitHub Pages.
+The website is built with HTML, CSS, and JavaScript and is hosted using GitHub Pages.
 
-## Purpose
+## Website Features
 
-The portfolio showcases my:
-
-- Software development background
-- IT experience
-- Technical skills
-- Education
-- Unity game-development work
-- Python and artificial-intelligence projects
-- Resume
-- Professional contact information
-
-## Current Features
-
-- Responsive professional portfolio layout
+- Responsive professional layout
 - About section
 - Technical skills section
 - Work-experience section
@@ -27,35 +14,37 @@ The portfolio showcases my:
 - Downloadable resume
 - GitHub and LinkedIn links
 - Formspree contact form
-- Project-selection dropdown
-- Unity WebGL project support
-- Google Colab notebook links
-- Links to project source repositories
+- Interactive project dropdown
+- Embedded project viewer
+- One-project-at-a-time loading
+- Manual project closing
+- Fullscreen project option
+- Unity WebGL support
+- Browser-based tools
+- Mobile navigation menu
 
-## Project Dropdown
+## Interactive Projects
 
-The website does not automatically load or run any project.
+The website does not automatically load a project.
 
 Visitors must:
 
 1. Select a project from the dropdown.
-2. Review the project description.
-3. Press the project button or repository button.
+2. Press **Load Project**.
+3. Use the project inside the embedded viewer.
+4. Press **Close Project** when finished.
 
-### Available Projects
+Only one project can run at a time.
 
-- Apple Picker
-- Video Generator
-- Image Generator
-- Multilingual Speech Synthesis
+Loading another project automatically unloads the currently active project.
 
-## Project Types
+## Included Projects
 
 ### Apple Picker
 
-Apple Picker is a Unity project exported as a WebGL build.
+A Unity WebGL game.
 
-Expected website location:
+Expected location:
 
 ```text
 projects/applepicker/
