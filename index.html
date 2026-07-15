@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Nathan Shorez's professional portfolio featuring software development, IT, AI, Python, and Unity projects."
+    content="Nathan Shorez's professional portfolio featuring software development, IT, artificial intelligence, Python, Unity, and game-development projects."
   >
 
   <title>Nathan Shorez | Software Developer Portfolio</title>
@@ -23,7 +23,18 @@
     <nav class="navbar" aria-label="Main navigation">
       <a class="logo" href="#home">Nathan Shorez</a>
 
-      <div class="nav-links">
+      <button
+        id="mobile-menu-button"
+        class="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        Menu
+      </button>
+
+      <div class="nav-links" id="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -45,7 +56,8 @@
       <p class="hero-description">
         I am a Computer Science graduate with experience in Java,
         Spring Boot, SQL, REST API development, Python, C++, Unity,
-        IT systems, automation, networking, and technical troubleshooting.
+        artificial intelligence, automation, networking, and technical
+        troubleshooting.
       </p>
 
       <div class="button-group">
@@ -94,8 +106,9 @@
         building clean, efficient, and impactful software solutions.
         I have a strong foundation in Java, Spring Boot, SQL, and REST
         API development through Revature’s Pre-Training Program.
-        I have expanded my experience through personal, academic, client,
-        IT, artificial intelligence, and Unity game-development projects.
+        I have expanded my experience through personal, academic,
+        artificial-intelligence, client, IT, and Unity game-development
+        projects.
       </p>
     </section>
 
@@ -120,8 +133,8 @@
 
           <p>
             Python, OpenCV, Pillow, Matplotlib, Diffusers,
-            PyTorch, Stable Diffusion, web scraping, and
-            multimedia generation.
+            PyTorch, Stable Diffusion, web scraping, multimedia
+            generation, speech generation, and artificial intelligence.
           </p>
         </article>
 
@@ -131,7 +144,7 @@
           <p>
             Data structures, algorithms, STL, priority queues,
             minimum spanning trees, Arduino, navigation systems,
-            sensors, and PID controllers.
+            sensors, depth-first search, and PID controllers.
           </p>
         </article>
 
@@ -141,7 +154,7 @@
           <p>
             C#, 2D and 3D development, player controls, physics,
             UI systems, gameplay scripting, level design,
-            networking, and WebGL builds.
+            networking, and WebGL deployment.
           </p>
         </article>
 
@@ -169,13 +182,13 @@
     <section id="projects" class="section">
       <div class="section-heading">
         <p class="section-label">Portfolio</p>
-        <h2>Projects</h2>
+        <h2>Interactive Projects</h2>
       </div>
 
       <p class="section-description">
-        Choose a project from the dropdown. Nothing runs when this page
-        first loads. The selected project opens only after you press
-        the project button.
+        Select one project and press Load Project. Only one project can
+        run at a time. Loading another project automatically unloads the
+        currently active project.
       </p>
 
       <div class="project-launcher">
@@ -188,64 +201,63 @@
             Select a project...
           </option>
 
-          <optgroup label="Browser Games">
+          <optgroup label="Games">
             <option value="applepicker">
               Apple Picker
             </option>
+
+            <option value="tetrisai">
+              Tetris AI
+            </option>
           </optgroup>
 
-          <optgroup label="Python and AI">
-            <option value="videogenerator">
-              Video Generator
-            </option>
-
+          <optgroup label="AI and Media Tools">
             <option value="imagegenerator">
-              Image Generator
+              AI Image Generator
             </option>
 
-            <option value="speechsynthesis">
-              Multilingual Speech Synthesis
+            <option value="videogenerator">
+              AI Video Generator
+            </option>
+
+            <option value="texttospeech">
+              Text-to-Speech Generator
             </option>
           </optgroup>
         </select>
 
         <div
-          id="project-details"
-          class="project-details"
+          class="project-summary"
+          id="project-summary"
           hidden
         >
           <p
-            id="project-type"
+            id="selected-project-type"
             class="project-type"
           ></p>
 
-          <h3 id="project-title"></h3>
+          <h3 id="selected-project-title"></h3>
 
-          <p id="project-description"></p>
-
-          <p
-            id="project-notice"
-            class="project-notice"
-          ></p>
+          <p id="selected-project-description"></p>
         </div>
 
         <div class="button-group project-buttons">
           <button
             class="btn"
-            id="open-project-button"
+            id="load-project-button"
             type="button"
             disabled
           >
-            Open Project
+            Load Project
           </button>
 
           <button
             class="btn secondary"
-            id="view-repo-button"
+            id="close-project-button"
             type="button"
             disabled
           >
-            View GitHub Repository
+            Close Project
           </button>
         </div>
 
@@ -256,6 +268,61 @@
         >
           Select a project to continue.
         </p>
+      </div>
+
+      <div
+        id="project-viewer"
+        class="project-viewer"
+        hidden
+      >
+        <div class="project-viewer-header">
+          <div>
+            <p
+              id="active-project-type"
+              class="project-type"
+            ></p>
+
+            <h3 id="active-project-title">
+              Project
+            </h3>
+          </div>
+
+          <div class="project-viewer-actions">
+            <a
+              id="active-project-repo"
+              class="repo-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Source Code
+            </a>
+
+            <button
+              id="fullscreen-project-button"
+              class="viewer-button"
+              type="button"
+            >
+              Open Fullscreen
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="project-loading"
+          class="project-loading"
+          hidden
+        >
+          Loading project...
+        </div>
+
+        <iframe
+          id="project-frame"
+          class="project-frame"
+          title="Interactive project"
+          allow="autoplay; fullscreen; microphone; clipboard-write"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
 
