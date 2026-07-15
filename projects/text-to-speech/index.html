@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text-to-Speech Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Browser Speech Synthesis</p>
+      <h1>Text-to-Speech Generator</h1>
+      <p>This website version replaces the notebook's online gTTS request with your browser's installed speech voices.</p>
+    </header>
+
+    <section class="card app">
+      <label>
+        Text to speak
+        <textarea id="text">Hello! This text-to-speech project is running directly in your browser.</textarea>
+      </label>
+
+      <div class="grid">
+        <label>
+          Voice
+          <select id="voice"></select>
+        </label>
+        <label>
+          Rate
+          <input id="rate" type="range" min="0.5" max="2" step="0.1" value="1">
+          <output id="rate-output">1.0×</output>
+        </label>
+        <label>
+          Pitch
+          <input id="pitch" type="range" min="0" max="2" step="0.1" value="1">
+          <output id="pitch-output">1.0</output>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button id="speak">Speak</button>
+        <button id="pause" class="secondary">Pause</button>
+        <button id="resume" class="secondary">Resume</button>
+        <button id="stop" class="danger">Stop</button>
+      </div>
+      <p id="status" class="status" aria-live="polite"></p>
+      <div class="notice">
+        The original notebook could save MP3/WAV through gTTS. This static GitHub Pages version speaks locally but does not export audio files.
+      </div>
+    </section>
+  </main>
+</body>
+</html>
